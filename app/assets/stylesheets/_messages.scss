@@ -36,47 +36,47 @@
   justify-content: space-between;
 
     &__user-name {
-    justify-content: flex-start;
-    line-height: 20px;
-    color: #ffffff;
-    width: 50px;
-    height: 20px;
-    font-size: 16px;
-    font-weight: bold;
+      justify-content: flex-start;
+      line-height: 20px;
+      color: #ffffff;
+      width: 50px;
+      height: 20px;
+      font-size: 16px;
+      font-weight: bold;
+  }
+
+
+    &__menu {
+      width: 60px;
+      justify-content: flex-end;
+      text-align: center;
+      height: 20px;
+      display: flex;
+      text-decoration: none;
+      }
+  
+    &__new-group {
+      text-decoration: none;
+      display: inline-block;
+      margin-right: 5px;
+      a {
+      color: #ffffff;
+      }
+      li {
+        }
+  
+  }
+
+    &__edit-user {
+      text-decoration: none;
+      display: inline-block;
+      a {
+      color: #ffffff;
+      }
+      li {
+      }
   }
 }
-
-  .side-header__box__menu {
-  width: 60px;
-  justify-content: flex-end;
-  text-align: center;
-  height: 20px;
-  display: flex;
-  text-decoration: none;
-  
-  .side-header__box__new-group {
-  text-decoration: none;
-  display: inline-block;
-  margin-right: 5px;
-  a {
-  color: #ffffff;
-  }
-  li {
-    }
-  
-  }
-
-  .side-header__box__edit-user {
-    text-decoration: none;
-    display: inline-block;
-    a {
-    color: #ffffff;
-    }
-    li {
-    }
-  }
-  }
-
 .groups {
   height: calc(100vh - 100px);
   background-color: #2f3e51;
@@ -91,17 +91,13 @@
       margin: 0 0 5px;
       font-weight: bold;
       color: #ffffff;
-
     }
   
     .group__latest-message {
       font-size: 11px;
       font-weight: bold;
       color: #ffffff;
-  
     }
-
-  
   }
 }
 
@@ -116,7 +112,7 @@
   padding: 0 40px;
   overflow: scroll;
 
-  .main-header__left-box {
+  &__left-box {
     margin-top: 35px;
    
     &__current-group {
@@ -132,7 +128,7 @@
     }
   }
 
-  .main-header__right-box {
+  &__right-box {
     height: 40px;
     width: 72px;
     color: #38aef0;
@@ -158,12 +154,12 @@
       display: flex;
       font-weight: bold;
      
-      .message__upper-info__talker {
+      &__talker {
         font-size: 16px;
         color: #333333;
       } 
 
-      .message__upper-info__data {
+      &__data {
       font-size: 12px;
       color: #999999;
       }
