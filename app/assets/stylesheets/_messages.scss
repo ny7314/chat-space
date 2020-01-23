@@ -22,18 +22,17 @@
   background-color: #253141;
   display: flex;
   align-items: center;
-}
 
-.side-header__box {
-  margin-left: 20px;
-  margin-right: 20px;
-  width: 260px;
-  height: 20px;
-  font-weight: bold;
-  background-color: #253141;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  &__box {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 260px;
+    height: 20px;
+    font-weight: bold;
+    background-color: #253141;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     &__user-name {
       justify-content: flex-start;
@@ -43,8 +42,7 @@
       height: 20px;
       font-size: 16px;
       font-weight: bold;
-  }
-
+    }
 
     &__menu {
       width: 60px;
@@ -53,7 +51,7 @@
       height: 20px;
       display: flex;
       text-decoration: none;
-      }
+    }
   
     &__new-group {
       text-decoration: none;
@@ -64,8 +62,7 @@
       }
       li {
         }
-  
-  }
+    }
 
     &__edit-user {
       text-decoration: none;
@@ -75,6 +72,7 @@
       }
       li {
       }
+    }
   }
 }
 .groups {
@@ -86,14 +84,14 @@
     margin-bottom: 40px;
     text-decoration: none;
 
-    .group__group-name {
+    &__group-name {
       font-size: 16px;
       margin: 0 0 5px;
       font-weight: bold;
       color: #ffffff;
     }
   
-    .group__latest-message {
+    &__latest-message {
       font-size: 11px;
       font-weight: bold;
       color: #ffffff;
@@ -150,7 +148,7 @@
   .message {
     padding-bottom: 40px;
 
-    .message__upper-info {
+    &__upper-info {
       display: flex;
       font-weight: bold;
      
@@ -164,25 +162,21 @@
       color: #999999;
       }
     }
-    .message__text {
+    &__text {
       margin-top: 12px;
       font-size: 14px;
       color: #434a54;
       margin-bottom: 46px;
     }
-
   }
-
 }
-
-
 .form {
   width: calc(100vw - 300px);
   height: 90px;
   background-color: #d2d2d2;
   padding: 20px 40px;
 
-  form {
+  .new-message {
     display: flex;
     .input-box {
       display: flex;
@@ -207,8 +201,7 @@
           display: none;
         }
       }
-
-      
+ 
     }
     .submit-btn {
       height: 50px;
