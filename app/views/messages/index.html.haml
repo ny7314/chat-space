@@ -1,5 +1,16 @@
 -# %h1 Messages#index
 -# %p Find me in app/views/messages/index.html.erb
 .wrapper
-  = render "side_bar"
+  = render "messages/side_bar"
   = render "main_chat"
+
+  .main-content
+  .chat-header
+    .chat-header--left
+      %h2 #{@group.name}
+      .chat-header__users
+        Members:
+        - @group.users.each do |user|
+          %span.chat-header__user #{user.name}
+    .chat-header--right
+      = link_to 'Edit', edit_group_path(@group), class: 'chat-header__edit-btn'
