@@ -1,42 +1,25 @@
 .main_chat
   .main-header
     .main-header__left-box
-      %h2.main-header__left-box__current-group testtest
-      %ul.main-header__left-box__member-list menber: test
+      %h2.main-header__left-box__current-group
+        = @group.name
+      %ul.main-header__left-box__member-list
+        Members: 
+        -@group.users.each do |user|
+          =user.name
     .main-header__right-box
-      = link_to "Edit", edit_group_path(@group), class: "link"
-    
-      
-
+      = link_to "Edit", edit_group_path(@group), class: "link"   
   .messages
     = render @messages
-    .message
-      .message__upper-info
-        .message__upper-info__talker test
-        .message__upper-info__data 2020/1/18 test
-      .message__text ohayou
-
-      .message__upper-info
-        .message__upper-info__talker test
-        .message__upper-info__data 2020/1/18 test
-      .message__text ohayou
-      
-
-  -# .form
-  -#   %form.new-message
-  -#     .input-box
-  -#       %input{type: "text", class: "input-box__text", placeholder: "type a message"}
-  -#       %label{class: "input-box__image", for: "message-image"}
-  -#         %i.fa.fa-image
-  -#         %input{type: "file", class: "input-box__image__file", id: "message-image"}
-  -#     %input{type: "submit", class: "submit-btn", value: "send"}
-
   .form
     = form_for [@group, @message] do |f|
-      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      = f.text_field :content, class: 'new-message', placeholder: 'type a message'
       .form__mask
-        = f.label :image, class: 'form__mask__image' do
-          = icon('fas', 'image', class: 'icon')
-          = f.file_field :image, class: 'hidden'
-      = f.submit 'Send', class: 'form__submit'
+        = f.label :image, class: 'input-box' do
+          = icon('fas', 'image', class: 'input-box__image')
+          = f.file_field :image, class: 'input-box__image__file'
+      = f.submit 'Send', class: 'submit-btn'
 
+
+    -# .upper-message__user-name
+    -#   = message.user.name

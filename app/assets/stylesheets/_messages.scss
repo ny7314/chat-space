@@ -79,10 +79,12 @@
   height: calc(100vh - 100px);
   background-color: #2f3e51;
   padding: 20px;
+  overflow: scroll;
    
   .group {
     margin-bottom: 40px;
     text-decoration: none;
+    
 
     &__name {
       font-size: 16px;
@@ -108,7 +110,7 @@
   display: flex;
   justify-content: space-between;
   padding: 0 40px;
-  overflow: scroll;
+  
 
   &__left-box {
     margin-top: 35px;
@@ -144,6 +146,7 @@
   background-color: #fafafa;
   margin-top: 100px;
   padding: 40px;
+  overflow: scroll;
 
   .message {
     padding-bottom: 40px;
@@ -176,13 +179,16 @@
   background-color: #d2d2d2;
   padding: 20px 40px;
 
-  .new-message {
+  .new_message {
     display: flex;
+    .new-message{
+      width: 100%;
+    }
     .input-box {
       display: flex;
       width: 100%;
       position: relative;
-
+      
       &__text {
         height: 50px;
         width: 100%;
