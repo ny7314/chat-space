@@ -51,6 +51,7 @@ $('#new_message').on('submit', function(e){
    dataType: 'json',
    processData: false,
    contentType: false
+   
  })
   .done(function(data){
     var html = buildHTML(data);
